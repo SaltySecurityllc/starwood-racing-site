@@ -36,10 +36,13 @@ exports.handler = async (event) => {
       custom_fields: [
         {
           key: "notes",
-          label: { type: "custom", custom: "Notes for your order (size, measurements, etc.)" },
+          label: { type: "custom", custom: "Notes (colors, sizing, custom requests)" },
           type: "text",
           optional: true,
-          text: notes ? { default_value: String(notes).slice(0, 140) } : undefined,
+          text: {
+            maximum_length: 500,
+            default_value: notes ? String(notes).slice(0, 490) : undefined,
+          },
         },
       ],
     });
