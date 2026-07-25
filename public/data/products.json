@@ -5,14 +5,14 @@
     "category": "Suits",
     "type": "Race Suit",
     "description": "Fully bespoke: your panel layout, your colors, your leather grade. Built from your measurements, not a size chart.",
-    "price_usd": 1000,
+    "price_usd": 1000.0,
     "price_max_usd": null,
     "sizes": null,
     "colors": null,
     "image": "/img/suits/custom-1.jpg",
     "requires_measurements": true,
-    "stripe_product_id": "prod_Ux0rqalDH3TnmW",
-    "stripe_price_id": "price_1Tx6py0i0mKX3HbitmwNyqlm",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "tier": "Custom",
     "images": [
       "/img/suits/custom-1.jpg",
@@ -30,7 +30,7 @@
     "category": "Suits",
     "type": "",
     "description": "Recreates a specific rider or team livery to your spec. Note the rider and details at checkout and we'll match it.",
-    "price_usd": 850,
+    "price_usd": 850.0,
     "price_max_usd": null,
     "sizes": [
       "XXS",
@@ -46,8 +46,8 @@
     "colors": null,
     "image": "/img/suits/replica-1.jpg",
     "requires_measurements": true,
-    "stripe_product_id": "prod_Ux0rb4yyzsiJNj",
-    "stripe_price_id": "price_1Tx6pz0i0mKX3HbiNSfTphiJ",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "tier": "Replica",
     "images": [
       "/img/suits/replica-1.jpg",
@@ -62,7 +62,7 @@
     "category": "Suits",
     "type": "",
     "description": "A step up in leather grade and protection, still pre-designed for a faster turnaround than a full custom build.",
-    "price_usd": 700,
+    "price_usd": 700.0,
     "price_max_usd": null,
     "sizes": [
       "XXS",
@@ -78,8 +78,8 @@
     "colors": null,
     "image": "/img/suits/speed-suit-1.png",
     "requires_measurements": true,
-    "stripe_product_id": "prod_Ux0rnbWToTnvYB",
-    "stripe_price_id": "price_1Tx6pz0i0mKX3HbiBlVCxp6E",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "tier": "Speed Suit",
     "images": [
       "/img/suits/speed-suit-1.png",
@@ -93,7 +93,7 @@
     "category": "Suits",
     "type": "",
     "description": "Pre-designed suit, ready to order without a full custom design process. Cowhide leather construction with CE-rated inner protection.",
-    "price_usd": 750,
+    "price_usd": 750.0,
     "price_max_usd": null,
     "sizes": [
       "XXS",
@@ -109,8 +109,8 @@
     "colors": null,
     "image": "/img/suits/visionary-1.png",
     "requires_measurements": true,
-    "stripe_product_id": "prod_Ux0r6fj9HujNyx",
-    "stripe_price_id": "price_1Tx6q00i0mKX3HbiSHKLQ9g8",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "tier": "Visionary",
     "images": [
       "/img/suits/visionary-1.png",
@@ -123,7 +123,7 @@
     "category": "Gloves",
     "type": "",
     "description": "Starwood Racings single cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
-    "price_usd": 175,
+    "price_usd": 175.0,
     "price_max_usd": null,
     "sizes": [
       "XXXS",
@@ -139,8 +139,8 @@
     "colors": null,
     "image": "/img/gloves/blade-v1-1.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rhtLERqfAQR",
-    "stripe_price_id": "price_1Tx6q00i0mKX3HbijJxYKP4y",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/gloves/blade-v1-1.jpg"
     ]
@@ -151,7 +151,7 @@
     "category": "Gloves",
     "type": "",
     "description": "Starwood Racings single cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
-    "price_usd": 200,
+    "price_usd": 200.0,
     "price_max_usd": null,
     "sizes": [
       "XXXS",
@@ -167,8 +167,8 @@
     "colors": null,
     "image": "/img/gloves/blade-v2-1.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rlliBOFlOtL",
-    "stripe_price_id": "price_1Tx6q10i0mKX3Hbi0TPfdV8J",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/gloves/blade-v2-1.jpg",
       "/img/gloves/blade-v2-2.jpg"
@@ -180,7 +180,7 @@
     "category": "Gloves",
     "type": "",
     "description": "Starwood Racings double cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
-    "price_usd": 160,
+    "price_usd": 160.0,
     "price_max_usd": null,
     "sizes": [
       "XXXS",
@@ -196,8 +196,8 @@
     "colors": null,
     "image": "/img/gloves/race-glove-1.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rurBY98jUJY",
-    "stripe_price_id": "price_1Tx6q20i0mKX3HbifUIOpgyE",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/gloves/race-glove-1.jpg",
       "/img/gloves/race-glove-2.jpg"
@@ -209,7 +209,7 @@
     "category": "Gloves",
     "type": "",
     "description": "Starwood Racings street gloves are designed for your daily commutes, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
-    "price_usd": 140,
+    "price_usd": 140.0,
     "price_max_usd": null,
     "sizes": [
       "XXXS",
@@ -225,8 +225,8 @@
     "colors": null,
     "image": "/img/gloves/street-glove-1.jpeg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rM9QPVufjnG",
-    "stripe_price_id": "price_1Tx6q20i0mKX3HbiCqgXlNun",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/gloves/street-glove-1.jpeg",
       "/img/gloves/street-glove-2.jpeg",
@@ -239,7 +239,7 @@
     "category": "Boots",
     "type": "",
     "description": "Our New boots provide a lot of great features, including breathability, fitment, and style! They are breathable with perforated upper and side sections. The top of the boot allows for a much snugger fitment around your ankle keeping your entire lower leg solid in case of a crash. We also cannot forget about styling. These things allow for custom color sections to match your suit or just be off...",
-    "price_usd": 480,
+    "price_usd": 480.0,
     "price_max_usd": null,
     "sizes": [
       "US 7 / EU 39",
@@ -255,8 +255,8 @@
     "colors": null,
     "image": "/img/boots/supersonic-1.jpeg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rssPIO5BIVI",
-    "stripe_price_id": "price_1Tx6q30i0mKX3HbiutQ1zZ6P",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/boots/supersonic-1.jpeg",
       "/img/boots/supersonic-2.jpeg",
@@ -270,7 +270,7 @@
     "category": "Boots",
     "type": "",
     "description": "CE Certified Race boots with an Axial Distortion Control bending system at the ankle for enhanced protection and maximum comfort. Lightweight with nylon heel inserts, thermoplastics sliders (metal optional), and breathable with perforated upper section for warm temperatures.",
-    "price_usd": 350,
+    "price_usd": 350.0,
     "price_max_usd": null,
     "sizes": [
       "US 7 / EU 39",
@@ -286,8 +286,8 @@
     "colors": null,
     "image": "/img/boots/warp-speed-2.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0r4a4tUo4y1T",
-    "stripe_price_id": "price_1Tx6q40i0mKX3HbiHTWBtCXP",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/boots/warp-speed-2.jpg"
     ]
@@ -298,7 +298,7 @@
     "category": "Jackets",
     "type": "",
     "description": "Standalone custom leather jacket. Pair it with matching Custom Leather Pants for a full jacket-and-pants combo.",
-    "price_usd": 350,
+    "price_usd": 350.0,
     "price_max_usd": null,
     "sizes": [
       "XXS",
@@ -314,8 +314,8 @@
     "colors": null,
     "image": "/img/jackets/jacket-1.jpeg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rSyidADZsPj",
-    "stripe_price_id": "price_1Tx6q40i0mKX3Hbirr9lwAUz",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/jackets/jacket-1.jpeg",
       "/img/jackets/jacket-2.jpeg",
@@ -327,8 +327,8 @@
     "name": "Custom Leather Pants",
     "category": "Jackets",
     "type": "Custom",
-    "description": "Standalone custom leather pants — shown paired with the matching jacket. Order both for a full combo.",
-    "price_usd": 350,
+    "description": "Standalone custom leather pants \u2014 shown paired with the matching jacket. Order both for a full combo.",
+    "price_usd": 350.0,
     "price_max_usd": null,
     "sizes": [
       "XXS",
@@ -349,8 +349,8 @@
       "/img/jackets/jacket-3.jpeg"
     ],
     "requires_measurements": true,
-    "stripe_product_id": "prod_Ux0r5FgBvJvWrO",
-    "stripe_price_id": "price_1Tx6q50i0mKX3HbiB68GiAuY"
+    "stripe_product_id": "",
+    "stripe_price_id": ""
   },
   {
     "id": "sliders",
@@ -358,7 +358,7 @@
     "category": "Protection",
     "type": "",
     "description": "These are our proprietary blend of materials that not only look good, but have a much better durability than other manufactures! Great for Rain or Dry tracks and for the first time track day rider or Pro racer!",
-    "price_usd": 25,
+    "price_usd": 25.0,
     "price_max_usd": null,
     "sizes": null,
     "colors": [
@@ -371,8 +371,8 @@
     ],
     "image": "/img/sliders/black.png",
     "requires_measurements": false,
-    "stripe_product_id": "prod_Ux0rmtvNX8cs11",
-    "stripe_price_id": "price_1Tx6q60i0mKX3HbiXzbsNFNz",
+    "stripe_product_id": "",
+    "stripe_price_id": "",
     "images": [
       "/img/sliders/black.png",
       "/img/sliders/blue.png",
