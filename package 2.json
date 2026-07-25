@@ -1,0 +1,13 @@
+{
+  "name": "starwood-racing-site",
+  "version": "1.0.0",
+  "description": "Starwood Racing custom storefront, built on Netlify + Stripe",
+  "private": true,
+  "scripts": {
+    "sync-products": "node scripts/sync-products-to-stripe.js",
+    "postsync-products": "cp data/products.json data/addons.json public/data/ && echo '✅ Copied synced data into public/data/ — ready to git add/commit/push.'"
+  },
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}

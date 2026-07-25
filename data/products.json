@@ -122,7 +122,7 @@
     "name": "SWR Blade V1 Race Glove",
     "category": "Gloves",
     "type": "",
-    "description": "Starwood Racings single cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
+    "description": "Starwood Racings single cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Want custom colors or styling on this glove? Email support@starwoodracing.us and we'll work out the details.",
     "price_usd": 175.0,
     "price_max_usd": null,
     "sizes": [
@@ -150,7 +150,7 @@
     "name": "SWR Blade V2 Race Glove",
     "category": "Gloves",
     "type": "",
-    "description": "Starwood Racings single cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
+    "description": "Starwood Racings single cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Want custom colors or styling on this glove? Email support@starwoodracing.us and we'll work out the details.",
     "price_usd": 200.0,
     "price_max_usd": null,
     "sizes": [
@@ -179,7 +179,7 @@
     "name": "SWR Race Glove",
     "category": "Gloves",
     "type": "",
-    "description": "Starwood Racings double cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
+    "description": "Starwood Racings double cuff gloves are designed for racing, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Want custom colors or styling on this glove? Email support@starwoodracing.us and we'll work out the details.",
     "price_usd": 160.0,
     "price_max_usd": null,
     "sizes": [
@@ -194,13 +194,13 @@
       "XXXL"
     ],
     "colors": null,
-    "image": "/img/gloves/race-glove-1.jpg",
+    "image": "/img/gloves/race-glove-2.jpg",
     "requires_measurements": false,
     "stripe_product_id": "",
     "stripe_price_id": "",
     "images": [
-      "/img/gloves/race-glove-1.jpg",
-      "/img/gloves/race-glove-2.jpg"
+      "/img/gloves/race-glove-2.jpg",
+      "/img/gloves/race-glove-1.jpg"
     ]
   },
   {
@@ -208,7 +208,7 @@
     "name": "SWR Street Glove",
     "category": "Gloves",
     "type": "",
-    "description": "Starwood Racings street gloves are designed for your daily commutes, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Email us @ starwoodracing@gmail.com after purchase, and we can custom design the glove colors and styling.",
+    "description": "Starwood Racings street gloves are designed for your daily commutes, offering a quick and easy securing mechanism, while still maintaining the highest level of safety! Made of high quality leather and TPU on the knuckles and fingers and padding on the palms. Want custom colors or styling on this glove? Email support@starwoodracing.us and we'll work out the details.",
     "price_usd": 140.0,
     "price_max_usd": null,
     "sizes": [
@@ -312,11 +312,12 @@
       "4XL"
     ],
     "colors": null,
-    "image": "/img/jackets/jacket-1.jpeg",
+    "image": "/img/jackets/yamaha-jacket-2.jpeg",
     "requires_measurements": false,
     "stripe_product_id": "",
     "stripe_price_id": "",
     "images": [
+      "/img/jackets/yamaha-jacket-2.jpeg",
       "/img/jackets/jacket-1.jpeg",
       "/img/jackets/jacket-2.jpeg",
       "/img/jackets/jacket-3.jpeg"
@@ -342,8 +343,9 @@
       "4XL"
     ],
     "colors": null,
-    "image": "/img/jackets/jacket-1.jpeg",
+    "image": "/img/jackets/jacket-and-pants-3.jpeg",
     "images": [
+      "/img/jackets/jacket-and-pants-3.jpeg",
       "/img/jackets/jacket-1.jpeg",
       "/img/jackets/jacket-2.jpeg",
       "/img/jackets/jacket-3.jpeg"
