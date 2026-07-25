@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starwood Racing — Custom Leather Race Suits</title>
+  <meta name="description" content="Custom and stock leather motorcycle race suits, built to your measurements and your livery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="wordmark">STARWOOD<span>RACING</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#tiers">Suits</a></li>
+          <li><a href="/size-guide.html">Size Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Built to your lean angle</div>
+      <h1>Suits cut for the corner, not the rack.</h1>
+      <p class="lede">
+        Every Starwood suit starts with your measurements, not a size chart.
+        Four tiers, one build standard: leather that survives the tarmac
+        as well as it survived the fitting.
+      </p>
+      <div class="button-row">
+        <a href="#tiers" class="btn btn-primary">Compare tiers</a>
+        <a href="/size-guide.html" class="btn btn-secondary">Get measured</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tiers" id="tiers">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Choose your build</h2>
+        <p>Every tier ships with CE-rated armor pockets and a fit review before cutting begins.</p>
+      </div>
+      <div class="lean-divider"></div>
+      <div class="tier-grid" id="tier-grid">
+        <!-- Populated from data/products.json at runtime -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-credit">Starwood Racing &mdash; starwoodracing.us</div>
+      <div class="footer-credit">Built by <a href="#">Panhandle Site Co</a></div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

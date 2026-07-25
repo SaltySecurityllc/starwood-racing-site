@@ -1,0 +1,79 @@
+[
+  {
+    "id": "airbag-tech-air-5",
+    "name": "Airbag System — Pro",
+    "price_usd": 1050,
+    "stripe_price_id": "price_1Twwx10i0mKX3HbigMGWzdT6",
+    "stripe_product_id": "prod_UwqeXigSFK1IxR"
+  },
+  {
+    "id": "airbag-tech-air-3",
+    "name": "Airbag System — Advanced",
+    "price_usd": 750,
+    "stripe_price_id": "price_1Twwx10i0mKX3HbiQjyxuH51",
+    "stripe_product_id": "prod_Uwqe7EvIysf3Vc"
+  },
+  {
+    "id": "airbag-klim",
+    "name": "Airbag System — Standard",
+    "price_usd": 500,
+    "stripe_price_id": "price_1Twwx20i0mKX3Hbiq7rMnuby",
+    "stripe_product_id": "prod_UwqePJyZg5HX0w"
+  },
+  {
+    "id": "hump-water-system",
+    "name": "Hump Water System",
+    "price_usd": 50,
+    "stripe_price_id": "price_1Twwx20i0mKX3HbitkTYIgQa",
+    "stripe_product_id": "prod_UwqePS5TL7KMe4"
+  },
+  {
+    "id": "winter-liner",
+    "name": "Winter Liner (Removable)",
+    "price_usd": 50,
+    "stripe_price_id": "price_1Twwx30i0mKX3HbilItja8Nf",
+    "stripe_product_id": "prod_UwqeTctjxKtrtp"
+  },
+  {
+    "id": "custom-size",
+    "name": "Custom Size Adjustment",
+    "price_usd": 80,
+    "stripe_price_id": "price_1Twwx30i0mKX3HbiecOj0ycO",
+    "stripe_product_id": "prod_Uwqe1sYmVIrIYB"
+  },
+  {
+    "id": "liner-removable",
+    "name": "Liner (Removable)",
+    "price_usd": 25,
+    "stripe_price_id": "price_1Twwx40i0mKX3HbiLOr4A5YT",
+    "stripe_product_id": "prod_UwqeUOguom28Fl"
+  },
+  {
+    "id": "perforated-leather",
+    "name": "Perforated Leather Inserts",
+    "price_usd": 50,
+    "stripe_price_id": "price_1Twwx50i0mKX3HbiHGKYaT2N",
+    "stripe_product_id": "prod_Uwqe0Wcsp4zq5C"
+  },
+  {
+    "id": "ce-level-2",
+    "name": "CE Level 2 Armor Upgrade",
+    "price_usd": 75,
+    "stripe_price_id": "price_1Twwx50i0mKX3Hbi7WqaFdZA",
+    "stripe_product_id": "prod_UwqekEgLzYQtAQ"
+  },
+  {
+    "id": "helmet-hump-race",
+    "name": "Race Hump",
+    "price_usd": 25,
+    "stripe_price_id": "price_1Twwx60i0mKX3HbijERy7HMP",
+    "stripe_product_id": "prod_UwqeWCLpw9ihnu"
+  },
+  {
+    "id": "kangaroo-leather",
+    "name": "Kangaroo Leather Upgrade",
+    "price_usd": 350,
+    "stripe_price_id": "price_1Twwx60i0mKX3HbiaBzqyjO0",
+    "stripe_product_id": "prod_Uwqew1m7x9qpjY"
+  }
+]

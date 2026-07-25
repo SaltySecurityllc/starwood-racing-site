@@ -1,0 +1,274 @@
+:root {
+  /* Color tokens */
+  --asphalt: #14161a;
+  --tarmac: #24272d;
+  --chrome: #9ba1a6;
+  --paper: #f2f0ea;
+  --race-red: #c81e2c;
+  --hazard: #e8a93b;
+
+  /* Type tokens */
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  /* The signature lean-angle: max cornering lean for a race bike, used
+     as the rotation for every diagonal divider on the site. */
+  --lean-angle: -8deg;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--asphalt);
+  color: var(--paper);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(20, 22, 26, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(155, 161, 166, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.wordmark span { color: var(--race-red); }
+
+nav.main-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+nav.main-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--chrome);
+  transition: color 0.15s ease;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a:focus-visible {
+  color: var(--paper);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding: 96px 24px 120px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  top: -20%;
+  width: 70%;
+  height: 160%;
+  background: linear-gradient(135deg, transparent 45%, rgba(200, 30, 44, 0.16) 46%, rgba(200, 30, 44, 0.16) 48%, transparent 49%);
+  transform: rotate(var(--lean-angle));
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 760px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hazard);
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 0.98;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+}
+
+.hero p.lede {
+  font-size: 1.1rem;
+  color: var(--chrome);
+  max-width: 52ch;
+  margin-bottom: 36px;
+}
+
+.button-row { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary { background: var(--race-red); color: var(--paper); }
+.btn-primary:hover { background: #a91824; }
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--chrome);
+  color: var(--paper);
+}
+.btn-secondary:hover { border-color: var(--paper); }
+
+/* ---------- Section divider (the signature motif) ---------- */
+
+.lean-divider {
+  height: 3px;
+  background: var(--race-red);
+  transform: rotate(var(--lean-angle));
+  transform-origin: left;
+  width: 120px;
+  margin: 0 auto 48px;
+}
+
+/* ---------- Tier comparison ---------- */
+
+.tiers {
+  padding: 80px 24px;
+  border-top: 1px solid rgba(155, 161, 166, 0.15);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.section-heading p {
+  color: var(--chrome);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.tier-card {
+  background: var(--tarmac);
+  border: 1px solid rgba(155, 161, 166, 0.15);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.15s ease;
+}
+
+.tier-card:hover { border-color: var(--race-red); }
+
+.tier-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hazard);
+}
+
+.tier-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.tier-card .price {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  color: var(--paper);
+}
+
+.tier-card p.desc {
+  color: var(--chrome);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  border-top: 1px solid rgba(155, 161, 166, 0.15);
+  padding: 48px 24px 32px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-credit {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--chrome);
+  text-transform: uppercase;
+}
+
+.footer-credit a { color: var(--chrome); border-bottom: 1px dotted var(--chrome); }
+.footer-credit a:hover { color: var(--paper); border-color: var(--paper); }
+
+@media (max-width: 640px) {
+  nav.main-nav { display: none; }
+  .hero { padding: 64px 20px 80px; }
+}
