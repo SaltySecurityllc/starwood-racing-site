@@ -3,77 +3,77 @@
     "id": "airbag-tech-air-5",
     "name": "Airbag System — Pro",
     "price_usd": 1050,
-    "stripe_price_id": "price_1Twwx10i0mKX3HbigMGWzdT6",
-    "stripe_product_id": "prod_UwqeXigSFK1IxR"
+    "stripe_price_id": "price_1Tx6q60i0mKX3Hbi0Eo5oPwY",
+    "stripe_product_id": "prod_Ux0r2a5Xg67EJb"
   },
   {
     "id": "airbag-tech-air-3",
     "name": "Airbag System — Advanced",
     "price_usd": 750,
-    "stripe_price_id": "price_1Twwx10i0mKX3HbiQjyxuH51",
-    "stripe_product_id": "prod_Uwqe7EvIysf3Vc"
+    "stripe_price_id": "price_1Tx6q70i0mKX3HbiTXmB6Oap",
+    "stripe_product_id": "prod_Ux0rTIbMq4wxEW"
   },
   {
     "id": "airbag-klim",
     "name": "Airbag System — Standard",
     "price_usd": 500,
-    "stripe_price_id": "price_1Twwx20i0mKX3Hbiq7rMnuby",
-    "stripe_product_id": "prod_UwqePJyZg5HX0w"
+    "stripe_price_id": "price_1Tx6q70i0mKX3HbiWXhB0EFS",
+    "stripe_product_id": "prod_Ux0r6TBCIkNXjj"
   },
   {
     "id": "hump-water-system",
     "name": "Hump Water System",
     "price_usd": 50,
-    "stripe_price_id": "price_1Twwx20i0mKX3HbitkTYIgQa",
-    "stripe_product_id": "prod_UwqePS5TL7KMe4"
+    "stripe_price_id": "price_1Tx6q80i0mKX3HbiaPMjlmDW",
+    "stripe_product_id": "prod_Ux0rQIDQyL2pLK"
   },
   {
     "id": "winter-liner",
     "name": "Winter Liner (Removable)",
     "price_usd": 50,
-    "stripe_price_id": "price_1Twwx30i0mKX3HbilItja8Nf",
-    "stripe_product_id": "prod_UwqeTctjxKtrtp"
+    "stripe_price_id": "price_1Tx6q80i0mKX3HbiGobL6HpW",
+    "stripe_product_id": "prod_Ux0rKpeUZO3J8u"
   },
   {
     "id": "custom-size",
     "name": "Custom Size Adjustment",
     "price_usd": 80,
-    "stripe_price_id": "price_1Twwx30i0mKX3HbiecOj0ycO",
-    "stripe_product_id": "prod_Uwqe1sYmVIrIYB"
+    "stripe_price_id": "price_1Tx6q90i0mKX3Hbiy2Ws9a1B",
+    "stripe_product_id": "prod_Ux0rbnUzbsh6VR"
   },
   {
     "id": "liner-removable",
     "name": "Liner (Removable)",
     "price_usd": 25,
-    "stripe_price_id": "price_1Twwx40i0mKX3HbiLOr4A5YT",
-    "stripe_product_id": "prod_UwqeUOguom28Fl"
+    "stripe_price_id": "price_1Tx6q90i0mKX3HbiZK9OZUWX",
+    "stripe_product_id": "prod_Ux0rmdS8s168UL"
   },
   {
     "id": "perforated-leather",
     "name": "Perforated Leather Inserts",
     "price_usd": 50,
-    "stripe_price_id": "price_1Twwx50i0mKX3HbiHGKYaT2N",
-    "stripe_product_id": "prod_Uwqe0Wcsp4zq5C"
+    "stripe_price_id": "price_1Tx6qA0i0mKX3HbiL0Z6src7",
+    "stripe_product_id": "prod_Ux0ria2Au26AH7"
   },
   {
     "id": "ce-level-2",
     "name": "CE Level 2 Armor Upgrade",
     "price_usd": 75,
-    "stripe_price_id": "price_1Twwx50i0mKX3Hbi7WqaFdZA",
-    "stripe_product_id": "prod_UwqekEgLzYQtAQ"
+    "stripe_price_id": "price_1Tx6qA0i0mKX3HbicMSi2maz",
+    "stripe_product_id": "prod_Ux0rPoSqA0fjwO"
   },
   {
     "id": "helmet-hump-race",
     "name": "Race Hump",
     "price_usd": 25,
-    "stripe_price_id": "price_1Twwx60i0mKX3HbijERy7HMP",
-    "stripe_product_id": "prod_UwqeWCLpw9ihnu"
+    "stripe_price_id": "price_1Tx6qB0i0mKX3Hbi5NOL7eGW",
+    "stripe_product_id": "prod_Ux0rMA0hd8Kjwo"
   },
   {
     "id": "kangaroo-leather",
     "name": "Kangaroo Leather Upgrade",
     "price_usd": 350,
-    "stripe_price_id": "price_1Twwx60i0mKX3HbiaBzqyjO0",
-    "stripe_product_id": "prod_Uwqew1m7x9qpjY"
+    "stripe_price_id": "price_1Tx6qC0i0mKX3HbixYW8eOAS",
+    "stripe_product_id": "prod_Ux0rk64uOKOnbW"
   }
 ]

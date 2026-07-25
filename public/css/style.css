@@ -64,7 +64,204 @@ header.site-header {
   text-transform: uppercase;
 }
 
-.wordmark span { color: var(--race-red); }
+.wordmark img { height: 34px; display: block; }
+
+/* ---------- Product cards (shared across suits/gloves/boots/etc) ---------- */
+
+.tier-card img.product-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--asphalt);
+  border: 1px solid rgba(155, 161, 166, 0.15);
+}
+
+.tier-card select.size-select {
+  background: var(--asphalt);
+  color: var(--paper);
+  border: 1px solid rgba(155, 161, 166, 0.3);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.tier-card .field-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--chrome);
+}
+
+.tier-card .measure-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--hazard);
+}
+
+.tier-card .measure-note a { text-decoration: underline; }
+
+.category-section {
+  padding: 64px 24px;
+  border-top: 1px solid rgba(155, 161, 166, 0.15);
+}
+
+.addons-panel {
+  border: 1px solid rgba(155, 161, 166, 0.2);
+  padding: 10px 12px;
+}
+
+.addons-panel summary {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--hazard);
+  cursor: pointer;
+}
+
+.addons-list { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+
+.addon-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--chrome);
+}
+
+.addon-row span:first-of-type { flex-grow: 1; }
+
+.addon-price {
+  font-family: var(--font-mono);
+  color: var(--paper);
+}
+
+.gallery-section {
+  padding: 64px 24px 80px;
+  border-top: 1px solid rgba(155, 161, 166, 0.15);
+}
+
+.gallery-disclaimer {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--chrome);
+  max-width: 62ch;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid rgba(155, 161, 166, 0.15);
+  transition: border-color 0.15s ease;
+}
+
+.gallery-grid img:hover { border-color: var(--race-red); }
+
+/* ---------- Standalone content pages (FAQ / Size Guide) ---------- */
+
+.page-hero {
+  padding: 72px 24px 40px;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 12px;
+}
+
+.page-hero p { color: var(--chrome); max-width: 60ch; }
+
+.page-content {
+  padding: 0 24px 96px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(155, 161, 166, 0.15);
+  padding: 24px 0;
+}
+
+.faq-item h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.faq-item p, .faq-item li { color: var(--chrome); }
+.faq-item ul { padding-left: 20px; margin-top: 8px; }
+
+.chart-block { margin-bottom: 56px; }
+
+.chart-block h2 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.chart-block img {
+  width: 100%;
+  border: 1px solid rgba(155, 161, 166, 0.15);
+  margin-bottom: 12px;
+}
+
+.download-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+
+.download-card {
+  background: var(--tarmac);
+  border: 1px solid rgba(155, 161, 166, 0.15);
+  padding: 20px 24px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.download-card .field-label { display: block; margin-bottom: 8px; }
+
+.download-card a {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--race-red);
+  text-decoration: underline;
+}
+
+.step-list { counter-reset: step; }
+
+.step-list li {
+  list-style: none;
+  counter-increment: step;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  color: var(--chrome);
+}
+
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 26px;
+  height: 26px;
+  background: var(--race-red);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 nav.main-nav ul {
   display: flex;
@@ -255,6 +452,12 @@ footer.site-footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-credit {

@@ -11,16 +11,21 @@ exports.handler = async (event) => {
   }
 
   try {
-    const { priceId, quantity = 1, customerEmail } = JSON.parse(event.body);
+    const { priceId, items, quantity = 1, customerEmail, notes } = JSON.parse(event.body);
 
-    if (!priceId) {
-      return { statusCode: 400, body: JSON.stringify({ error: "Missing priceId" }) };
+    // Support either a single priceId (legacy) or an array of {priceId, quantity} items
+    const lineItems = items && items.length
+      ? items.map((i) => ({ price: i.priceId, quantity: i.quantity || 1 }))
+      : [{ price: priceId, quantity }];
+
+    if (!lineItems.length || !lineItems[0].price) {
+      return { statusCode: 400, body: JSON.stringify({ error: "Missing priceId or items" }) };
     }
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
-      line_items: [{ price: priceId, quantity }],
+      line_items: lineItems,
       customer_email: customerEmail || undefined,
       shipping_address_collection: { allowed_countries: ["US", "CA"] },
       success_url: `${SITE_URL}/order-confirmed.html?session_id={CHECKOUT_SESSION_ID}`,
@@ -31,9 +36,10 @@ exports.handler = async (event) => {
       custom_fields: [
         {
           key: "notes",
-          label: { type: "custom", custom: "Notes for your custom order (optional)" },
+          label: { type: "custom", custom: "Notes for your order (size, measurements, etc.)" },
           type: "text",
           optional: true,
+          text: notes ? { default_value: String(notes).slice(0, 140) } : undefined,
         },
       ],
     });
