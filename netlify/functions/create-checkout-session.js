@@ -40,8 +40,8 @@ exports.handler = async (event) => {
           type: "text",
           optional: true,
           text: {
-            maximum_length: 500,
-            default_value: notes ? String(notes).slice(0, 490) : undefined,
+            maximum_length: 255,
+            default_value: notes ? String(notes).slice(0, 250) : undefined,
           },
         },
       ],
