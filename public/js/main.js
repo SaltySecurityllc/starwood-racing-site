@@ -45,25 +45,31 @@ function renderGrid(elementId, products, showAddons) {
     });
   });
 
-  // Wire up buy buttons
+  // Wire up Add to Cart buttons
   grid.querySelectorAll("button[data-price-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const card = btn.closest(".tier-card");
       const sizeSelect = card ? card.querySelector(".size-select") : null;
       const colorSelect = card ? card.querySelector(".color-select") : null;
       const addonBoxes = card ? card.querySelectorAll(".addon-check:checked") : [];
+      const thumb = card ? card.querySelector(".product-thumb") : null;
 
-      const parts = [];
-      if (sizeSelect) parts.push(`Size: ${sizeSelect.value}`);
-      if (colorSelect) parts.push(`Color: ${colorSelect.value}`);
+      const addons = Array.from(addonBoxes).map((box) => ({
+        name: box.dataset.name,
+        priceId: box.dataset.priceId,
+        price: parseFloat(box.dataset.price || "0"),
+      }));
 
-      const items = [{ priceId: btn.dataset.priceId, quantity: 1 }];
-      addonBoxes.forEach((box) => {
-        items.push({ priceId: box.dataset.priceId, quantity: 1 });
-        parts.push(`+ ${box.dataset.name}`);
+      addToCart({
+        productId: btn.dataset.priceId,
+        name: btn.dataset.name,
+        image: thumb ? thumb.src : "",
+        unitPrice: parseFloat(btn.dataset.price || "0"),
+        priceId: btn.dataset.priceId,
+        size: sizeSelect ? sizeSelect.value : null,
+        color: colorSelect ? colorSelect.value : null,
+        addons,
       });
-
-      startCheckout(items, parts.length ? parts.join(", ") : null);
     });
   });
 }
@@ -106,7 +112,7 @@ function cardHTML(p, showAddons) {
           ${ADDONS.map(
             (a) => `
             <label class="addon-row">
-              <input type="checkbox" class="addon-check" data-price-id="${a.stripe_price_id}" data-name="${a.name}" ${
+              <input type="checkbox" class="addon-check" data-price-id="${a.stripe_price_id}" data-name="${a.name}" data-price="${a.price_usd}" ${
               a.stripe_price_id ? "" : "disabled"
             } />
               <span>${a.name}</span>
@@ -127,39 +133,16 @@ function cardHTML(p, showAddons) {
       ${colorField}
       ${addonsField}
       <span class="price">${priceLabel}</span>
-      <button class="btn btn-primary" data-price-id="${p.stripe_price_id}" ${
+      <button class="btn btn-primary" data-price-id="${p.stripe_price_id}" data-name="${p.name}" data-price="${p.price_usd}" ${
         p.stripe_price_id ? "" : 'disabled title="Not yet synced to Stripe"'
       }>
-        Buy now
+        Add to Cart
       </button>
     </article>
   `;
 }
 
-async function startCheckout(items, notes) {
-  if (!items || !items.length || !items[0].priceId) {
-    alert("This product hasn't been synced to Stripe yet.");
-    return;
-  }
-
-  try {
-    const res = await fetch("/api/create-checkout-session", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items, notes }),
-    });
-    const data = await res.json();
-
-    if (data.url) {
-      window.location.href = data.url;
-    } else {
-      alert("Something went wrong starting checkout. Please try again.");
-      console.error(data);
-    }
-  } catch (err) {
-    console.error(err);
-    alert("Something went wrong starting checkout. Please try again.");
-  }
-}
+// Checkout is now handled by cart.js (checkoutCart), which combines all cart
+// items into a single Stripe Checkout session.
 
 init();
