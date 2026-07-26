@@ -35,6 +35,16 @@ function addToCart(item) {
     cart.push({ ...item, key, quantity: 1 });
   }
   saveCart(cart);
+
+  if (typeof fbq === "function") {
+    const addonsTotal = (item.addons || []).reduce((s, a) => s + a.price, 0);
+    fbq("track", "AddToCart", {
+      content_name: item.name,
+      value: item.unitPrice + addonsTotal,
+      currency: "USD",
+    });
+  }
+
   openCart();
 }
 
@@ -147,6 +157,14 @@ function renderCart() {
 async function checkoutCart() {
   const cart = getCart();
   if (cart.length === 0) return;
+
+  if (typeof fbq === "function") {
+    fbq("track", "InitiateCheckout", {
+      value: cartTotal(cart),
+      currency: "USD",
+      num_items: cart.reduce((n, i) => n + i.quantity, 0),
+    });
+  }
 
   const items = [];
   const noteParts = [];
