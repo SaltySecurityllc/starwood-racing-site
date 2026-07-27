@@ -16,14 +16,35 @@ const SITE_URL = "https://starwoodracing.us";
 const PRODUCTS_PATH = path.join(__dirname, "..", "data", "products.json");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "google-shopping-feed.csv");
 
-// Rough Google product category per internal category — refine in Merchant
-// Center itself, which will suggest more precise categories on review.
+// Correct, specific (leaf-level) Google product taxonomy paths per internal category.
+// Google wants the deepest accurate node, not a broad parent — "Outerwear" alone
+// is too shallow and can trigger a category-mismatch/requirements error.
 const CATEGORY_MAP = {
-  Suits: "Apparel & Accessories > Clothing > Outerwear",
-  Jackets: "Apparel & Accessories > Clothing > Outerwear",
+  Suits: "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+  Jackets: "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
   Gloves: "Apparel & Accessories > Clothing Accessories > Gloves & Mittens",
   Boots: "Apparel & Accessories > Shoes",
   Protection: "Vehicles & Parts > Vehicle Parts & Accessories",
+};
+
+// A best-guess primary color per product, based on the photographed sample.
+// These are custom/made-to-order items where the customer actually picks
+// color at checkout — this field just needs *a* reasonable value to satisfy
+// Google's apparel requirement, not a locked-in spec.
+const COLOR_MAP = {
+  "custom-race-suit": "Multi-color",
+  "standard-race-suit": "Multi-color",
+  "speed-suit": "Black/Red/White",
+  "the-visionary": "Black/Red/White",
+  "custom-leather-jacket": "Black",
+  "custom-leather-pants": "Black",
+  "swr-street-glove": "Black",
+  "swr-race-glove-double-cuff-strap": "Black/Blue/Yellow",
+  "swr-race-glove-single-cuff-strap": "Blue/Red",
+  "swr-blade-v2-race-glove": "Pink/Yellow",
+  "supersonic-boots": "Pink/Yellow",
+  "race-boots": "Black/Yellow/Pink",
+  sliders: "Black", // overridden below for the actual color-variant products
 };
 
 function csvEscape(value) {
@@ -41,33 +62,61 @@ function main() {
     "id", "title", "description", "link", "image_link",
     "availability", "price", "condition", "brand",
     "identifier_exists", "google_product_category",
+    "color", "size", "gender", "age_group",
   ];
 
-  const rows = products
-    .filter((p) => p.price_usd != null) // skip anything without a real price yet
-    .map((p) => {
+  const rows = [];
+
+  products
+    .filter((p) => p.price_usd != null)
+    .forEach((p) => {
       const image = p.image || (p.images && p.images[0]) || "";
-      return [
-        p.id,
-        p.name,
-        (p.description || p.name).replace(/\s+/g, " ").trim().slice(0, 5000),
-        `${SITE_URL}/#product-${p.id}`,
-        image ? `${SITE_URL}${image}` : "",
-        "in stock",
-        `${p.price_usd.toFixed(2)} USD`,
-        "new",
-        "Starwood Racing",
-        "no", // no GTIN/MPN for these custom/made-to-order items
-        CATEGORY_MAP[p.category] || "Apparel & Accessories",
-      ];
+      const baseRow = {
+        id: p.id,
+        title: p.name,
+        description: (p.description || p.name).replace(/\s+/g, " ").trim().slice(0, 5000),
+        link: `${SITE_URL}/#product-${p.id}`,
+        image_link: image ? `${SITE_URL}${image}` : "",
+        availability: "in stock",
+        price: `${p.price_usd.toFixed(2)} USD`,
+        condition: "new",
+        brand: "Starwood Racing",
+        identifier_exists: "no",
+        google_product_category: CATEGORY_MAP[p.category] || "Apparel & Accessories",
+        gender: "unisex",
+        age_group: "adult",
+      };
+
+      // Sliders come in real, distinct color variants — submit one feed row
+      // per color so each is a separate, correctly-attributed listing.
+      if (p.id === "sliders" && p.colors && p.colors.length) {
+        p.colors.forEach((color, idx) => {
+          const colorImage = (p.images && p.images[idx]) || image;
+          rows.push({
+            ...baseRow,
+            id: `${p.id}-${color.toLowerCase()}`,
+            title: `${p.name} (${color})`,
+            image_link: colorImage ? `${SITE_URL}${colorImage}` : "",
+            color,
+            size: "One Size",
+          });
+        });
+        return;
+      }
+
+      rows.push({
+        ...baseRow,
+        color: COLOR_MAP[p.id] || "Multi-color",
+        size: p.sizes && p.sizes.length ? "Custom / See size chart" : "One Size",
+      });
     });
 
   const lines = [headers.join(",")].concat(
-    rows.map((row) => row.map(csvEscape).join(","))
+    rows.map((row) => headers.map((h) => csvEscape(row[h])).join(","))
   );
 
   fs.writeFileSync(OUTPUT_PATH, lines.join("\n"));
-  console.log(`Wrote ${rows.length} products to ${OUTPUT_PATH}`);
+  console.log(`Wrote ${rows.length} product rows to ${OUTPUT_PATH}`);
 }
 
 main();
