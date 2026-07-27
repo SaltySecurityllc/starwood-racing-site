@@ -124,7 +124,7 @@ function cardHTML(p, showAddons) {
       : "";
 
   return `
-    <article class="tier-card">
+    <article class="tier-card" id="product-${p.id}">
       ${img ? `<img class="product-thumb" src="${img}" alt="${p.name}" loading="lazy" />` : ""}
       ${p.tier ? `<span class="tier-label">${p.tier}</span>` : ""}
       <h3>${p.name}</h3>

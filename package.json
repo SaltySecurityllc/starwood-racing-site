@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "sync-products": "node scripts/sync-products-to-stripe.js",
-    "postsync-products": "cp data/products.json data/addons.json public/data/ && echo '✅ Copied synced data into public/data/ — ready to git add/commit/push.'"
+    "postsync-products": "cp data/products.json data/addons.json public/data/ && echo '✅ Copied synced data into public/data/ — ready to git add/commit/push.'",
+    "generate-feed": "node scripts/generate-google-feed.js"
   },
   "dependencies": {
     "stripe": "^16.0.0"

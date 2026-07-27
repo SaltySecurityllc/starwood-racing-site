@@ -11,8 +11,8 @@
     "colors": null,
     "image": "/img/suits/custom-1.jpg",
     "requires_measurements": true,
-    "stripe_product_id": "prod_UxDUIpq7b3dStk",
-    "stripe_price_id": "price_1TxJ3A0i0mKX3Hbi1O9bqprK",
+    "stripe_product_id": "prod_UxZN01wZstmqwK",
+    "stripe_price_id": "price_1TxeEf0i0mKX3HbiW4Ewn0PR",
     "tier": "Custom",
     "images": [
       "/img/suits/custom-1.jpg",
@@ -46,8 +46,8 @@
     "colors": null,
     "image": "/img/suits/replica-1.jpg",
     "requires_measurements": true,
-    "stripe_product_id": "prod_UxDUFCgScZyNL9",
-    "stripe_price_id": "price_1TxJ3A0i0mKX3HbiaeXy027z",
+    "stripe_product_id": "prod_UxZNJO2qfK9OLB",
+    "stripe_price_id": "price_1TxeEf0i0mKX3HbiOpZeFWog",
     "tier": "Replica",
     "images": [
       "/img/suits/replica-1.jpg",
@@ -78,8 +78,8 @@
     "colors": null,
     "image": "/img/suits/speed-suit-1.png",
     "requires_measurements": true,
-    "stripe_product_id": "prod_UxDUwTzyAO3inq",
-    "stripe_price_id": "price_1TxJ3B0i0mKX3HbiUQPnD47h",
+    "stripe_product_id": "prod_UxZNd6qWTlu32G",
+    "stripe_price_id": "price_1TxeEg0i0mKX3HbiYTPUKqCo",
     "tier": "Speed Suit",
     "images": [
       "/img/suits/speed-suit-1.png",
@@ -109,8 +109,8 @@
     "colors": null,
     "image": "/img/suits/visionary-1.png",
     "requires_measurements": true,
-    "stripe_product_id": "prod_UxDUyqDQA2dlAZ",
-    "stripe_price_id": "price_1TxJ3C0i0mKX3HbicwK7LVF6",
+    "stripe_product_id": "prod_UxZN7On4WIpQ3y",
+    "stripe_price_id": "price_1TxeEh0i0mKX3HbiLlRIO5fn",
     "tier": "Visionary",
     "images": [
       "/img/suits/visionary-1.png",
@@ -139,8 +139,8 @@
     "colors": null,
     "image": "/img/gloves/blade-v1-1.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDUSR86KeMQPJ",
-    "stripe_price_id": "price_1TxJ3C0i0mKX3HbiMYNGdhpW",
+    "stripe_product_id": "prod_UxZNB5bosVHUtD",
+    "stripe_price_id": "price_1TxeEh0i0mKX3HbihXYzqisa",
     "images": [
       "/img/gloves/blade-v1-1.jpg"
     ]
@@ -167,8 +167,8 @@
     "colors": null,
     "image": "/img/gloves/blade-v2-1.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDUrP1Izbb2EU",
-    "stripe_price_id": "price_1TxJ3D0i0mKX3HbiPeTBcwve",
+    "stripe_product_id": "prod_UxZNQh9C9CiQFY",
+    "stripe_price_id": "price_1TxeEi0i0mKX3Hbi2QDuC7Dn",
     "images": [
       "/img/gloves/blade-v2-1.jpg",
       "/img/gloves/blade-v2-2.jpg"
@@ -196,8 +196,8 @@
     "colors": null,
     "image": "/img/gloves/race-glove-2.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDUoqX0eE3hu0",
-    "stripe_price_id": "price_1TxJ3D0i0mKX3HbicdLP2SrO",
+    "stripe_product_id": "prod_UxZNj3nPmEVRrg",
+    "stripe_price_id": "price_1TxeEj0i0mKX3HbiuBFudFb8",
     "images": [
       "/img/gloves/race-glove-2.jpg",
       "/img/gloves/race-glove-1.jpg"
@@ -225,8 +225,8 @@
     "colors": null,
     "image": "/img/gloves/street-glove-1.jpeg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDU5qVfBaTJH8",
-    "stripe_price_id": "price_1TxJ3E0i0mKX3HbiKsnKBrmP",
+    "stripe_product_id": "prod_UxZNQfLlnmjma4",
+    "stripe_price_id": "price_1TxeEj0i0mKX3Hbij3hecLOa",
     "images": [
       "/img/gloves/street-glove-1.jpeg",
       "/img/gloves/street-glove-2.jpeg",
@@ -255,8 +255,8 @@
     "colors": null,
     "image": "/img/boots/supersonic-1.jpeg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDU8CSCPvFGHR",
-    "stripe_price_id": "price_1TxJ3F0i0mKX3HbiGoNWXPBI",
+    "stripe_product_id": "prod_UxZNwxlSkqdP8A",
+    "stripe_price_id": "price_1TxeEk0i0mKX3Hbi5cVY2zpR",
     "images": [
       "/img/boots/supersonic-1.jpeg",
       "/img/boots/supersonic-2.jpeg",
@@ -286,8 +286,8 @@
     "colors": null,
     "image": "/img/boots/warp-speed-2.jpg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDUafwtyCtloN",
-    "stripe_price_id": "price_1TxJ3F0i0mKX3HbiYcQ9rwV9",
+    "stripe_product_id": "prod_UxZNKYRFeXxNWW",
+    "stripe_price_id": "price_1TxeEk0i0mKX3Hbi745MIfDu",
     "images": [
       "/img/boots/warp-speed-2.jpg"
     ]
@@ -314,8 +314,8 @@
     "colors": null,
     "image": "/img/jackets/yamaha-jacket-2.jpeg",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDU6j0bwQoqPG",
-    "stripe_price_id": "price_1TxJ3G0i0mKX3HbiFx0mhVko",
+    "stripe_product_id": "prod_UxZNtLFpEzUqnG",
+    "stripe_price_id": "price_1TxeEl0i0mKX3HbizoopT2rd",
     "images": [
       "/img/jackets/yamaha-jacket-2.jpeg",
       "/img/jackets/jacket-1.jpeg",
@@ -351,8 +351,8 @@
       "/img/jackets/jacket-3.jpeg"
     ],
     "requires_measurements": true,
-    "stripe_product_id": "prod_UxDUJoA1ylLSBT",
-    "stripe_price_id": "price_1TxJ3G0i0mKX3HbivyvX7qTr"
+    "stripe_product_id": "prod_UxZNfeh2nQwL3C",
+    "stripe_price_id": "price_1TxeEm0i0mKX3HbilEaJPejc"
   },
   {
     "id": "sliders",
@@ -373,8 +373,8 @@
     ],
     "image": "/img/sliders/black.png",
     "requires_measurements": false,
-    "stripe_product_id": "prod_UxDUkRXVaGj7Jf",
-    "stripe_price_id": "price_1TxJ3H0i0mKX3Hbiv3Dvkx1G",
+    "stripe_product_id": "prod_UxZNP0rBQbMydL",
+    "stripe_price_id": "price_1TxeEm0i0mKX3HbiARyDep0y",
     "images": [
       "/img/sliders/black.png",
       "/img/sliders/blue.png",
