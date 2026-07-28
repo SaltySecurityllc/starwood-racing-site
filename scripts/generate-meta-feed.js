@@ -48,7 +48,7 @@ function csvEscape(value) {
 function main() {
   const products = JSON.parse(fs.readFileSync(PRODUCTS_PATH, "utf8"));
   const headers = ["id","title","description","availability","condition","price","link",
-    "image_link","brand","item_group_id","color","size","gender","age_group"];
+    "image_link","brand","item_group_id","color","size","gender","age_group","inventory"];
 
   const rows = [];
   products.filter((p) => p.price_usd != null).forEach((p) => {
@@ -64,6 +64,9 @@ function main() {
       brand: "Starwood Racing",
       gender: "unisex",
       age_group: "adult",
+      // Made-to-order items aren't stock-limited in the traditional sense,
+      // but Meta requires an explicit quantity > 0 for items marked in stock.
+      inventory: 999,
     };
 
     if (p.id === "sliders" && p.colors && p.colors.length) {
