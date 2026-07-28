@@ -44,8 +44,26 @@ const COLOR_MAP = {
   "swr-blade-v2-race-glove": "Pink/Yellow",
   "supersonic-boots": "Pink/Yellow",
   "race-boots": "Black/Yellow/Pink",
-  sliders: "Black", // overridden below for the actual color-variant products
+  sliders: "Black",
 };
+
+// Estimated shipping weight per product — required by Merchant Center when
+// shipping settings are weight-based.
+const WEIGHT_MAP = {
+  "custom-race-suit": "6 lb",
+  "standard-race-suit": "6 lb",
+  "speed-suit": "5.5 lb",
+  "the-visionary": "5.5 lb",
+  "custom-leather-jacket": "3.5 lb",
+  "custom-leather-pants": "3 lb",
+  "swr-street-glove": "1 lb",
+  "swr-race-glove-double-cuff-strap": "1 lb",
+  "swr-race-glove-single-cuff-strap": "1 lb",
+  "swr-blade-v2-race-glove": "1 lb",
+  "supersonic-boots": "4 lb",
+  "race-boots": "4 lb",
+};
+const SLIDER_WEIGHT = "0.3 lb";
 
 function csvEscape(value) {
   const str = String(value == null ? "" : value);
@@ -62,7 +80,7 @@ function main() {
     "id", "title", "description", "link", "image_link",
     "availability", "price", "condition", "brand",
     "identifier_exists", "google_product_category",
-    "color", "size", "gender", "age_group",
+    "color", "size", "gender", "age_group", "shipping_weight",
   ];
 
   const rows = [];
@@ -99,6 +117,7 @@ function main() {
             image_link: colorImage ? `${SITE_URL}${colorImage}` : "",
             color,
             size: "One Size",
+            shipping_weight: SLIDER_WEIGHT,
           });
         });
         return;
@@ -108,6 +127,7 @@ function main() {
         ...baseRow,
         color: COLOR_MAP[p.id] || "Multi-color",
         size: p.sizes && p.sizes.length ? "Custom / See size chart" : "One Size",
+        shipping_weight: WEIGHT_MAP[p.id] || "3 lb",
       });
     });
 
